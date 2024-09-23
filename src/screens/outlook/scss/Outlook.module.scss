@@ -1,0 +1,163 @@
+.outlookContainer {
+  padding: 1.5rem;
+  background-color: #F4F5F9;
+  min-height: 100svh;
+}
+
+.filterPanelContainer {
+  width: fit-content;
+  display: flex;
+  gap: 0.7rem;
+
+  >span {
+    color: black;
+    display: block;
+    width: fit-content;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  >span:not(span:first-child) {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  >span:first-child {
+    padding-left: 0rem;
+  }
+
+  >span:nth-child(2) {
+    margin-left: 0.3rem;
+  }
+
+  .activeFilter {
+    background-color: #E1E4EA;
+    border: 1px solid #CFD2DC;
+    border-radius: 20px;
+  }
+}
+
+.outlookMainPanelWrapper {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+
+  .panelWithBody {
+    width: 40%;
+  }
+
+  .panelWithoutBody {
+    width: 100%;
+  }
+
+  .bodyWrapper {
+    width: 60%;
+  }
+
+  .emailCardsContainer {
+    border: 1px solid #CFD2DC;
+    border-radius: 10px;
+    padding: 0.6rem 0.8rem;
+    background-color: white;
+    display: flex;
+    gap: calc(0.3rem + 1.4rem);
+    margin-bottom: 1.7rem;
+    cursor: pointer;
+
+    .contentWrapper {
+      font-size: 0.8rem;
+      color: #636363;
+
+      >span:first-child,
+      >span:nth-child(2) {
+        display: block;
+      }
+
+      >p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+      }
+
+      >span:first-child {
+        margin-bottom: 0.7rem;
+      }
+
+      .boldTxt {
+        font-weight: bold;
+      }
+
+      .favColor {
+        color: #E54065;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  .activeEmailCard {
+    border-color: #E54065;
+    background-color: #F2F2F2;
+  }
+
+  .readEmailCard {
+    background-color: #F2F2F2;
+  }
+}
+
+.avatar {
+  background-color: #E54065;
+  color: white;
+  padding: 0.7rem 0.9rem;
+  border-radius: 50%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.emailBodyWrapper {
+  border: 1px solid #CFD2DC;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1.3rem;
+  display: flex;
+  gap: 1.5rem;
+
+  >div:last-child {
+    >div:first-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      >span:first-child {
+        font-size: 1.6rem;
+        color: #636363;
+        font-weight: 500;
+      }
+
+      >button {
+        padding: 0.5rem 1rem;
+        border-radius: 15px;
+        background-color: #E54065;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    >span:nth-child(2) {
+      display: block;
+      color: #636363;
+      font-size: 0.9rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    >div:last-child {
+      color: #636363;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
+  }
+}
