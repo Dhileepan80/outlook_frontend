@@ -42,8 +42,6 @@ export default function EmailListView() {
 
   if (isEmailListLoading) return <div>Loading...</div>
 
-  console.log('check log', filteredEmailList)
-
   return (
     <>
       {filteredEmailList.map((ele) => (
